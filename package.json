@@ -1,0 +1,19 @@
+{
+  "name": "auto-read-sw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@adiwajshing/baileys": "^4.1.0",
+    "mongoose": "^6.4.3",
+    "qrcode-terminal": "^0.12.0",
+    "telebot": "^1.4.1"
+  }
+}
