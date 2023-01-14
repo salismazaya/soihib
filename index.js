@@ -3,7 +3,7 @@ const { DisconnectReason, useMultiFileAuthState } = require('@adiwajshing/bailey
 const fs = require('fs')
 
 const main = async () => {
-    const { state } = await useMultiFileAuthState('login')
+    const { state, saveCreds } = await useMultiFileAuthState('login')
     
     function connectToWhatsApp() {
         const sock = makeWASocket({
@@ -22,6 +22,7 @@ const main = async () => {
                     connectToWhatsApp()
                 }
             } else if(connection === 'open') {
+                saveCreds();
                 console.log('opened connection')
             }
         })
