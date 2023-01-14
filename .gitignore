@@ -3,5 +3,6 @@ node_modules
 package-lock.json
 result
 login.json
+login
 group_id.txt
 nowas.txt
