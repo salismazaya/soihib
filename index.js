@@ -1,6 +1,7 @@
 const { default: makeWASocket } = require('@adiwajshing/baileys')
 const { DisconnectReason, useMultiFileAuthState } = require('@adiwajshing/baileys')
 const fs = require('fs')
+const pino = require('pino')
 
 const main = async () => {
     const { state, saveCreds } = await useMultiFileAuthState('login')
@@ -9,6 +10,9 @@ const main = async () => {
         const sock = makeWASocket({
             printQRInTerminal: true,
             auth: state,
+            logger: pino({
+                level: 'fatal'
+            })
         })
 
         sock.ev.on('connection.update', (update) => {
@@ -79,7 +83,7 @@ const main = async () => {
 
         const text = `Sw Terdeteksi
     
-Nowa: ${senderNumber}
+Nowa: https://wa.me/${senderNumber.split('@')[0]}
 Username: ${message.pushName}
     
 Coba cek kontak kamu nomor ini sudah di save belum :)`.trim()
