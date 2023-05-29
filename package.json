@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@adiwajshing/baileys": "^4.1.0",
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "@whiskeysockets/baileys": "^6.1.0",
     "pino": "^8.11.0",
     "qrcode-terminal": "^0.12.0"
   }

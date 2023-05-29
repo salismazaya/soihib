@@ -1,8 +1,8 @@
-const { default: makeWASocket } = require('@adiwajshing/baileys')
+const { default: makeWASocket } = require('@whiskeysockets/baileys')
 const {
     DisconnectReason,
     useMultiFileAuthState,
-} = require('@adiwajshing/baileys')
+} = require('@whiskeysockets/baileys')
 const fs = require('fs')
 const pino = require('pino')
 
