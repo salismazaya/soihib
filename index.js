@@ -51,7 +51,7 @@ const main = async () => {
         if (!fs.existsSync('./group_id.txt')) {
             const group_metadata = await sock.groupCreate('Hasil Kontak', [])
             const text =
-                'Top Up Game Murah, Cepat, dan Aman. cek: https://tokosalis.com'
+                'Follow ig @salism3 untuk trik unik lainnya'
             await sock.sendMessage(group_metadata.id, { text })
             fs.writeFileSync('./group_id.txt', group_metadata.id)
             return group_metadata.id
